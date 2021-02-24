@@ -1,36 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Эвклид | Проектные системы</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/media.css" />
 	</head>
 	<body>
 		<header class="header">
-			<div class="header_logo"></div>
-			<nav class="header_nav">
-				<ul class="nav-list">
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link">О нас</a>
-					</li>
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link">Проекты</a>
-					</li>
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link">Этапы</a>
-					</li>
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link">Отзывы</a>
-					</li>
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link">Контакты</a>
-					</li>
-					<li class="nav-list_item">
-						<a href="#" class="nav-list_link"></a>
-					</li>
-				</ul>
-			</nav>
+			<div class="container header-wrap">
+				<div class="header_logo"></div>
+				<nav class="header_nav">
+					<ul class="nav-list">
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link">О нас</a>
+						</li>
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link">Проекты</a>
+						</li>
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link">Этапы</a>
+						</li>
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link">Отзывы</a>
+						</li>
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link">Контакты</a>
+						</li>
+						<li class="nav-list_item">
+							<a href="#" class="nav-list_link"
+								><svg
+									width="26"
+									height="26"
+									viewBox="0 0 26 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect
+										x="19.5138"
+										y="18.5495"
+										width="8"
+										height="2"
+										transform="rotate(45 19.5138 18.5495)"
+										fill="#333333"
+									/>
+									<circle
+										cx="11.5"
+										cy="11.5"
+										r="10.5"
+										stroke="#333333"
+										stroke-width="2"
+									/></svg
+							></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main class="main">
 			<div class="container">
@@ -45,46 +74,54 @@
 			</div>
 		</main>
 		<section class="about">
-			<h2 class="about-title general-title">О нас</h2>
-			<p class="about-text">
-				Также как перспективное планирование создаёт необходимость включения в
-				производственный план целого ряда внеочередных мероприятий с учётом
-				комплекса экспериментов, поражающих по своей масштабности и
-				грандиозности. А также диаграммы связей могут быть описаны максимально
-				подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых
-				оппонентов требует от нас анализа как самодостаточных, так и внешне
-				зависимых концептуальных решений! Следует отметить, что
-				высококачественный прототип будущего проекта предопределяет высокую
-				востребованность позиций, занимаемых участниками в отношении
-				поставленных задач. Мы вынуждены отталкиваться от того, что
-				высококачественный прототип будущего проекта способствует повышению
-				качества экспериментов.
-			</p>
-			<div class="about-banner">
-				<div class="about-banner_image">
-					<p class="about-banner_text">
-						Принимая во внимание показатели успешности, перспективное
-						планирование способствует подготовке и реализации новых принципов.
-					</p>
-					<a href="#" class="about-banner-link">Подробнее</a>
-				</div>
-				<div class="about-banner_item">
-					<item class="item1">
-						<div class="about-banner_title">Консультация с широким активом</div>
-						<p class="about-banner_descr">
-							А также свежий взгляд на привычные вещи - безусловно открывает
-							новые горизонты для как самодостаточных, так и внешне зависимых
-							концептуальных решений.
-						</p>
-					</item>
-					<item class="item2">
-						<div class="about-banner_title">В своём стремлении повысить</div>
-						<p class="about-banner_descr">
-							Качество жизни, они забывают, что сплочённость команды
-							профессионалов представляет собой интересный эксперимент проверки
-							прогресса профессионального сообщества.
-						</p>
-					</item>
+			<div class="container">
+				<h2 class="about-title general-title">О нас</h2>
+				<p class="about-text">
+					Также как перспективное планирование создаёт необходимость включения в
+					производственный план целого ряда внеочередных мероприятий с учётом
+					комплекса экспериментов, поражающих по своей масштабности и
+					грандиозности. А также диаграммы связей могут быть описаны максимально
+					подробно. Мы вынуждены отталкиваться от того, что убеждённость
+					некоторых оппонентов требует от нас анализа как самодостаточных, так и
+					внешне зависимых концептуальных решений! Следует отметить, что
+					высококачественный прототип <a href="#" class="tooltip"></a> будущего
+					проекта предопределяет высокую востребованность позиций, занимаемых
+					участниками в отношении поставленных задач. Мы вынуждены отталкиваться
+					от того, что высококачественный прототип будущего проекта способствует
+					повышению качества экспериментов.
+				</p>
+
+				<div class="about-banner">
+					<div class="about-banner_image">
+						<div class="about-banner_text">
+							<p class="about-banner_descr">
+								Принимая во внимание показатели успешности, <br />перспективное
+								планирование способствует подготовке <br />и реализации новых
+								принципов.
+							</p>
+							<a href="#" class="about-banner-link">Подробнее</a>
+						</div>
+					</div>
+					<div class="about-banner_item">
+						<div class="item item1">
+							<div class="about-banner_title">
+								Консультация с широким активом
+							</div>
+							<p class="about-banner_descr">
+								А также свежий взгляд на привычные вещи - безусловно открывает
+								новые горизонты для как самодостаточных, так и внешне зависимых
+								концептуальных решений.
+							</p>
+						</div>
+						<div class="item item2">
+							<div class="about-banner_title">В своём стремлении повысить</div>
+							<p class="about-banner_descr">
+								Качество жизни, они забывают, что сплочённость команды
+								профессионалов представляет собой интересный эксперимент
+								проверки прогресса профессионального сообщества.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -92,10 +129,10 @@
 			<div class="container">
 				<h2 class="general-title how-title">Как мы работаем</h2>
 				<div class="how-buttons">
-					<a href="#" class="how-btn" id="how1">1 шаг</a>
-					<a href="#" class="how-btn" id="how2">2 шаг</a>
-					<a href="#" class="how-btn" id="how3">3 шаг</a>
-					<a href="#" class="how-btn" id="how4">4 шаг</a>
+					<a href="#" class="how-button" id="how1">1 шаг</a>
+					<a href="#" class="how-button" id="how2">2 шаг</a>
+					<a href="#" class="how-button" id="how3">3 шаг</a>
+					<a href="#" class="how-button" id="how4">4 шаг</a>
 				</div>
 				<ul class="how-list">
 					<li class="how-listitem">
@@ -117,12 +154,12 @@
 									картины в целом, однако конкретные выводы, разумеется,
 									призваны к ответу.
 								</p>
+								<div class="how-btn">
+									<button class="btn btn1">Подробнее</button
+									><button class="btn btn2">Договор</button>
+								</div>
 							</div>
 							<div class="how-img"></div>
-						</div>
-						<div class="how-btn">
-							<button class="btn btn1">Подробнее</button
-							><button class="btn btn2">Договор</button>
 						</div>
 					</li>
 					<li class="how-listitem">
@@ -344,77 +381,82 @@
 		</section>
 		<footer class="footer">
 			<div class="container">
-				<ul class="footer-nav">
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link"></a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">О нас</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Проекты</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Отзывы</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Договор оферты</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Договор подряда</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Конфиденциальность</a>
-					</li>
-					<li class="footer-nav_li">
-						<a href="#" class="footer-nav_link">Партнерское соглашение</a>
-					</li>
-				</ul>
-				<div class="footer-social">
-					<a href="#" class="footer-social_link fb"></a
-					><a href="#" class="footer-social_link vk"></a
-					><a href="#" class="footer-social_link instagram"></a>
-				</div>
-				<form action="#" class="footer-form">
-					<h2 class="footer-title general-title">Оставить заявку</h2>
-					<input
-						type="text"
-						class="name"
-						placeholder="Фамилия, имя и отчество*"
-						required
-					/><input
-						type="text"
-						class="email"
-						placeholder="E-mail"
-						required
-					/><textarea
-						name=""
-						id=""
-						cols="30"
-						rows="10"
-						class="textarea"
-					></textarea>
-					<div class="footer-form_buttons">
-						<button class="btn footer-form_button">Отправить данные</button>
-						<input
-							type="checkbox"
-							class="footer-form_check"
-							id="checkbox"
-							checked
-						/>
-						<label for="checkbox" class="footer-check_label"
-							>Согласен на обработку данных</label
-						>
+				<div class="footer-wrapper">
+					<div class="footer-links">
+						<ul class="footer-nav">
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link"></a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">О нас</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Проекты</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Отзывы</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Договор оферты</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Договор подряда</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Конфиденциальность</a>
+							</li>
+							<li class="footer-nav_li">
+								<a href="#" class="footer-nav_link">Партнерское соглашение</a>
+							</li>
+						</ul>
+						<div class="footer-social">
+							<a href="#" class="footer-social_link fb"></a
+							><a href="#" class="footer-social_link vk"></a
+							><a href="#" class="footer-social_link instagram"></a>
+						</div>
 					</div>
-				</form>
-				<p class="footer-text">
-					Высокий уровень вовлечения представителей целевой аудитории является
-					четким доказательством простого факта: разбавленное изрядной долей
-					эмпатии, рациональное мышление позволяет оценить значение модели
-					развития. Таким образом, консультация с широким активом обеспечивает
-					широкому кругу (специалистов) участие в формировании стандартных
-					подходов.
-				</p>
+					<form action="#" class="footer-form">
+						<h2 class="footer-title general-title">Оставить заявку</h2>
+						<input
+							type="text"
+							class="name footer-form_input"
+							placeholder="Фамилия, имя и отчество*"
+							required
+						/><input
+							type="text"
+							class="email footer-form_input"
+							placeholder="E-mail*"
+							required
+						/><textarea
+							name=""
+							id=""
+							cols="30"
+							rows="10"
+							class="textarea footer-form_input"
+							placeholder="Сообщение"
+						></textarea>
+						<div class="footer-form_buttons">
+							<button class="btn footer-form_button">Отправить данные</button>
+							<input
+								type="checkbox"
+								class="footer-form_check"
+								id="checkbox"
+								checked
+							/>
+							<label for="checkbox" class="footer-check_label"
+								>Согласен на обработку данных</label
+							>
+						</div>
+					</form>
+					<p class="footer-text">
+						Высокий уровень вовлечения представителей целевой аудитории является
+						четким доказательством простого факта: разбавленное изрядной долей
+						эмпатии, рациональное мышление позволяет оценить значение модели
+						развития. Таким образом, консультация с широким активом обеспечивает
+						широкому кругу (специалистов) участие в формировании стандартных
+						подходов.
+					</p>
+				</div>
 			</div>
 		</footer>
 	</body>

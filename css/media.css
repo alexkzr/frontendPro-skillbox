@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+	.nav-list_item:not(:last-child):hover {
+		border-bottom: 2px solid var(--main-color);
+		padding-bottom: 10px;
+	}
+	.nav-list_item:not(:last-child):active {
+		border-bottom: 2px solid var(--main-active-color);
+		padding-bottom: 10px;
+	}
+	.nav-list_link:active {
+		color: var(--main-active-color);
+	}
+	.nav-list_link:last-child:hover svg circle {
+		stroke: var(--main-color);
+	}
+	.nav-list_link:last-child:hover rect {
+		fill: var(--main-color);
+	}
+	.nav-list_link:last-child:active svg circle {
+		stroke: var(--main-active-color);
+	}
+	.nav-list_link:last-child:active rect {
+		fill: var(--main-active-color);
+	}
+	.btn:hover {
+		background: rgba(255, 153, 0, 0.6);
+		cursor: pointer;
+	}
+	.btn:active {
+		background: var(--main-active-color);
+	}
+	.how-button:hover {
+		color: rgba(255, 153, 0, 0.6);
+		cursor: pointer;
+	}
+	.how-button:active {
+		color: var(--main-active-color);
+	}
+	.btn2:hover {
+		background-color: #666;
+		color: #fff;
+		cursor: pointer;
+	}
+	.btn2:active {
+		color: #fff;
+		background-color: #000;
+	}
+}
