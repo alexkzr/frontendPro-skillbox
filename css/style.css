@@ -2,7 +2,10 @@
 	box-sizing: border-box;
 	font-family: Montserrat, sans-serif;
 }
-
+section:not(.about),
+footer {
+	display: none;
+}
 :root {
 	--main-color: #ff9900;
 	--main-active-color: #e1670e;
@@ -58,6 +61,9 @@ section {
 	height: 100%;
 }
 .header_nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	height: 100%;
 }
 .nav-list {
@@ -71,9 +77,7 @@ section {
 .nav-list_item {
 	padding-bottom: 10px;
 }
-.nav-list_item:last-child {
-	padding: 10px;
-}
+
 .nav-list_item:not(:last-child) {
 	margin-right: 75px;
 }
@@ -196,9 +200,16 @@ section {
 	flex-direction: column;
 	flex: 1 1 50%;
 }
+
 .item {
-	padding: 70px 100px 50px 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 10px 20px 10px 300px;
 	border: 1px solid #cacaca;
+	min-height: 295px;
+	justify-content: center;
+	text-align: left;
 }
 .about-banner_title {
 	font-size: 24px;

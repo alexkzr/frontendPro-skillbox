@@ -46,3 +46,148 @@
 		background-color: #000;
 	}
 }
+@media (min-width: 1024px) {
+	.header-burger {
+		display: none;
+	}
+}
+@media (max-width: 1400px) {
+	.about-banner {
+		flex-direction: column;
+	}
+	.about-banner_item {
+		min-height: 295px;
+	}
+	.about-banner_image {
+		min-height: 620px;
+		margin-bottom: 50px;
+		margin-right: 0;
+	}
+	.about-banner_text {
+		padding: 50px;
+	}
+}
+@media (max-width: 1200px) {
+	.main .container,
+	.header .container {
+		padding: 0 50px;
+	}
+	.nav-list_item:not(:last-child) {
+		margin-right: 35px;
+	}
+}
+@media (max-width: 1024px) {
+	.nav-list_item:not(:last-child) {
+		display: none;
+	}
+	.header-burger {
+		cursor: pointer;
+		display: block;
+	}
+	.header_nav {
+		margin: 0;
+	}
+	.header-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	.main-banner {
+		padding: 100px 0 110px 80px;
+	}
+	.main-subtitile {
+		margin-bottom: 115px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 50px;
+	}
+	.main .container,
+	.header .container {
+		padding: 0;
+	}
+
+	.header {
+		padding: 0 50px;
+		height: 70px;
+	}
+	.item1 {
+		background-position: 6% 48%;
+	}
+	.item2 {
+		background-position: 6% 38%;
+	}
+	.item {
+		padding: 20px 20px 20px 220px;
+	}
+}
+@media (max-width: 567px) {
+	.main-title {
+		font-size: 50px;
+		line-height: 55px;
+		margin-bottom: 10px;
+	}
+	.main-banner {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 480px) {
+	.header:not(.header-container),
+	.main .container,
+	.container {
+		padding: 0 15px;
+	}
+	.main-title {
+		font-size: 21px;
+		line-height: 25px;
+		text-align: center;
+	}
+	.main-subtitile {
+		font-size: 12px;
+		margin-bottom: 34px;
+		text-align: center;
+		line-height: 15px;
+	}
+	.main-banner {
+		padding: 30px 10px 40px 10px;
+		min-height: 265px;
+	}
+	.main-button {
+		padding: 15px 20px;
+		align-self: center;
+	}
+	.nav-list_item:last-child .nav-list_link {
+		display: none;
+	}
+	.header-wrap {
+		flex-direction: row-reverse;
+	}
+	.header_logo,
+	.main-logo {
+		width: 100px;
+		height: 30px;
+		margin-right: auto;
+	}
+	.header {
+		height: 45px;
+	}
+	.main-button {
+		font-size: 12px;
+		padding: 5px 27px;
+	}
+	main,
+	section {
+		margin-bottom: 40px;
+	}
+	.general-title {
+		font-size: 24px;
+		margin-bottom: 2px;
+	}
+	.about-text {
+		line-height: 28px;
+		font-size: 14px;
+	}
+}
