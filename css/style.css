@@ -2,10 +2,10 @@
 	box-sizing: border-box;
 	font-family: Montserrat, sans-serif;
 }
-section:not(.about),
+/* section:not(.about),
 footer {
 	display: none;
-}
+} */
 :root {
 	--main-color: #ff9900;
 	--main-active-color: #e1670e;
@@ -73,9 +73,6 @@ section {
 }
 .header_nav {
 	margin-left: auto;
-}
-.nav-list_item {
-	padding-bottom: 10px;
 }
 
 .nav-list_item:not(:last-child) {
@@ -237,6 +234,7 @@ section {
 	background: url("../img/section1-1.svg") no-repeat;
 	background-position: 9% 38%;
 }
+
 /* HOW */
 .how-button {
 	color: var(--main-font-color);
@@ -288,6 +286,7 @@ section {
 }
 .how-title {
 	margin-top: 0;
+	font-size: 24px;
 }
 /* FAQ */
 .faq-answer {
@@ -295,14 +294,14 @@ section {
 }
 .faq-listitem {
 	position: relative;
-	padding: 40px 0;
+	padding: 41px 0;
 	border-bottom: 1px solid #cacaca;
 	font-size: 24px;
 	font-weight: 700;
 }
 .faq-link {
 	position: absolute;
-	right: 0;
+	right: -15px;
 	top: 50%;
 	transform: translateY(-50%);
 	width: 50px;
@@ -342,7 +341,7 @@ section {
 }
 .footer-nav_link {
 	font-size: 18px;
-	line-height: 32px;
+	line-height: 35px;
 	font-weight: 600;
 }
 .footer-social_link {
@@ -377,28 +376,34 @@ section {
 .footer-form {
 	display: flex;
 	flex-direction: column;
+	margin-right: 238px;
 }
 .footer-form_input::placeholder {
 	color: #cacaca;
 }
 .footer-form_input:not(:last-child) {
-	margin-bottom: 25px;
+	margin-bottom: 27px;
 }
 .footer-form_input {
-	padding: 15px 20px;
+	padding: 20px;
 	background-color: #414141;
 	border: none;
+}
+input.name.footer-form_input {
+	width: 570px;
 }
 .textarea {
 	resize: none;
 	margin-bottom: 30px;
+	max-height: 150px;
 }
 .footer-form_button {
 	margin-right: 25px;
 }
-.footer-form {
-	margin-right: 230px;
-}
+
 .footer-text {
 	margin-top: 90px;
+}
+button.btn.footer-form_button {
+	padding: 20px 50px;
 }
