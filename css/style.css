@@ -2,10 +2,10 @@
 	box-sizing: border-box;
 	font-family: Montserrat, sans-serif;
 }
-/* section:not(.about),
+section:not(.about, .how),
 footer {
 	display: none;
-} */
+}
 :root {
 	--main-color: #ff9900;
 	--main-active-color: #e1670e;
@@ -242,9 +242,7 @@ section {
 	line-height: 22px;
 	font-weight: 400;
 }
-.how-button:not(:last-child) {
-	margin-right: 85px;
-}
+
 .how-button:first-child {
 	color: var(--main-active-color);
 }
