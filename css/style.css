@@ -2,10 +2,7 @@
 	box-sizing: border-box;
 	font-family: Montserrat, sans-serif;
 }
-section:not(.about, .how),
-footer {
-	display: none;
-}
+
 :root {
 	--main-color: #ff9900;
 	--main-active-color: #e1670e;

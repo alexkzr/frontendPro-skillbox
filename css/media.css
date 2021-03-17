@@ -56,6 +56,18 @@
 		margin-right: 85px;
 	}
 }
+@media (max-width: 1800px) {
+	.footer .container {
+		padding: 50px 80px;
+	}
+	.footer-wrapper {
+		justify-content: space-between;
+	}
+	.footer-links,
+	.footer-form {
+		margin-right: 20px;
+	}
+}
 @media (max-width: 1400px) {
 	.about-banner {
 		flex-direction: column;
@@ -70,6 +82,9 @@
 	}
 	.about-banner_text {
 		padding: 50px;
+	}
+	.footer-text {
+		display: none;
 	}
 }
 @media (max-width: 1200px) {
@@ -87,6 +102,7 @@
 	}
 }
 @media (max-width: 1024px) {
+	/* HEADER */
 	.nav-list_item:not(:last-child) {
 		display: none;
 	}
@@ -108,10 +124,16 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	/* MAIN */
 	.main-title {
 		line-height: 80px;
 		font-size: 61px;
 		margin-bottom: 0;
+	}
+	.main-button {
+		max-width: 285px;
+		padding: 27px 15px;
+		margin-left: 10px;
 	}
 	.main-banner {
 		padding: 150px 0 110px 40px;
@@ -120,7 +142,11 @@
 		margin-bottom: 100px;
 	}
 	.general-title {
-		margin-bottom: 27px;
+		margin-bottom: 23px;
+	}
+	/* ABOUT */
+	.about {
+		margin-bottom: 65px;
 	}
 	.about-text {
 		line-height: 32px;
@@ -129,15 +155,81 @@
 	.about-banner_descr {
 		line-height: 30px;
 	}
+	.about-banner-link {
+		margin-top: 20px;
+	}
 	.item {
 		padding: 65px 25px 10px 352px;
 		justify-content: flex-start;
 	}
 	.item1 {
 		background-position: 15% 48%;
+		margin-bottom: 40px;
 	}
 	.item2 {
 		background-position: 15% 50%;
+	}
+	/* HOW */
+	.how .general-title {
+		margin-bottom: 35px;
+	}
+	.how-descr {
+		margin-bottom: 20px;
+	}
+	.how-title {
+		margin-bottom: 10px;
+	}
+	.how-text {
+		margin-right: 50px;
+	}
+	/* FAQ */
+	section.faq {
+		margin-bottom: 48px;
+	}
+	.faq-listitem {
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		line-height: 32px;
+		padding: 0 70px 0 0;
+		min-height: 120px;
+	}
+	.faq-listitem:first-child {
+		border-top: 1px solid #cacaca;
+	}
+	.faq-link {
+		right: 0;
+	}
+	.faq .general-title {
+		width: 91vw;
+	}
+	/* FOOTER */
+	.footer .container {
+		padding: 60px 50px;
+	}
+	.footer-links {
+		margin-right: 160px;
+	}
+	input.name.footer-form_input {
+		max-width: 535px;
+	}
+	.footer-nav_li:first-child {
+		margin-top: -15px;
+	}
+	.footer-social {
+		margin-bottom: 0;
+	}
+	.footer-form_button {
+		margin-right: 10px;
+	}
+	.footer-check_label {
+		font-size: 14px;
+	}
+	button.btn.footer-form_button {
+		padding: 20px 40px;
+	}
+	.footer-form_buttons {
+		width: 101%;
 	}
 }
 
@@ -156,6 +248,23 @@
 	.how-descr {
 		width: 100%;
 	}
+	.footer-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.footer-form {
+		margin-bottom: 60px;
+	}
+	.footer-nav_li:not(:first-child) {
+		display: none;
+	}
+	.footer-links {
+		justify-content: flex-end;
+	}
+	input.name.footer-form_input,
+	.footer-form_input {
+		max-width: 100%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -173,6 +282,8 @@
 		height: 70px;
 	}
 	.main-banner {
+		background: url(../img/main-banner_768.jpg) no-repeat center;
+		background-size: cover;
 		padding: 190px 0 110px 50px;
 	}
 	.main-title {
@@ -216,6 +327,23 @@
 	}
 	.how-button {
 		margin-right: 0;
+	}
+	.how-img {
+		min-height: 284px;
+	}
+	section.faq {
+		margin-bottom: 80px;
+	}
+	/* FOOTER */
+	.footer-form {
+		margin-bottom: 75px;
+	}
+	input.name.footer-form_input,
+	.footer-form_input {
+		max-width: 534px;
+	}
+	.footer-form_input:not(:last-child) {
+		margin-bottom: 30px;
 	}
 }
 @media (max-width: 567px) {
@@ -323,16 +451,29 @@
 		font-size: 24px;
 		margin-bottom: 2px;
 	}
+	.about {
+		margin-bottom: 30px;
+	}
 	.about-text {
 		line-height: 28px;
 		font-size: 14px;
 		margin-bottom: 10px;
+	}
+	.about-banner_image {
+		margin-bottom: 30px;
+	}
+	.about-banner_img {
+		margin-bottom: 15px;
+	}
+	.about-banner_text {
+		justify-content: center;
 	}
 	.about-banner_descr {
 		margin-bottom: 18px;
 	}
 	.about-banner-link {
 		padding: 5px 35px;
+		margin-top: 0;
 	}
 	.item {
 		padding-top: 70px;
@@ -340,5 +481,49 @@
 	.item2 {
 		padding-top: 60px;
 		background-position: 0 0;
+	}
+	.how .general-title {
+		margin-bottom: 20px;
+	}
+	.how-buttons {
+		margin-bottom: 20px;
+	}
+	.how-img {
+		min-height: 160px;
+		margin-bottom: 5px;
+	}
+	.how-title {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+	.how-descr {
+		font-size: 14px;
+		line-height: 28px;
+	}
+	.btn {
+		font-size: 12px;
+	}
+	.btn1 {
+		padding: 12px 43px;
+		margin-right: 10px;
+	}
+	.btn2 {
+		padding: 12px 30px;
+	}
+	/* FAQ */
+	.faq-listitem {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 500;
+		min-height: 108px;
+		padding: 30px 60px 30px 0;
+	}
+	.faq-title {
+		margin-bottom: 30px;
+	}
+	.faq-link {
+		width: 30px;
+		height: 30px;
+		background-size: 50%;
 	}
 }
