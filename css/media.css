@@ -349,6 +349,10 @@
 	.footer-form_input:not(:last-child) {
 		margin-bottom: 30px;
 	}
+	.footer-links,
+	.footer-form {
+		margin-right: 0;
+	}
 }
 @media (max-width: 567px) {
 	.main-title {
@@ -487,10 +491,13 @@
 		background-position: 0 0;
 	}
 	.how .general-title {
-		margin-bottom: 20px;
+		margin-bottom: 33px;
 	}
 	.how-buttons {
 		margin-bottom: 20px;
+	}
+	.how-button {
+		font-size: 14px;
 	}
 	.how-img {
 		min-height: 160px;
@@ -514,7 +521,11 @@
 	.btn2 {
 		padding: 12px 30px;
 	}
+
 	/* FAQ */
+	section.faq {
+		margin-bottom: 25px;
+	}
 	.faq-listitem {
 		font-size: 14px;
 		line-height: 24px;
@@ -533,6 +544,12 @@
 	.footer .general-title {
 		margin-bottom: 20px;
 	}
+	.footer .container {
+		padding: 38px 15px;
+	}
+	.footer-form {
+		margin-bottom: 45px;
+	}
 	.footer-form_buttons {
 		display: flex;
 		flex-direction: column;
@@ -540,11 +557,35 @@
 	button.btn.footer-form_button {
 		padding: 14px 28px;
 		max-width: 180px;
-		margin-bottom: 20px;
+		margin-bottom: 17px;
 	}
 	.footer-form_checkbox {
 		display: flex;
-		padding-bottom: 25px;
+		padding-bottom: 30px;
 		border-bottom: 1px solid #595959;
+	}
+	.footer-check_label {
+		font-size: 16px;
+	}
+	.footer-nav_li:first-child {
+		width: 135px;
+		height: 42px;
+	}
+	.footer-social_link:not(:last-child) {
+		margin-right: 15px;
+	}
+	.footer-links {
+		align-items: center;
+	}
+	.footer-social_link {
+		width: 34px;
+		height: 34px;
+		background-size: cover;
+	}
+	.footer-nav_li:first-child {
+		margin-bottom: 15px;
+	}
+	.footer-form_input:not(:last-child) {
+		margin-bottom: 27px;
 	}
 }
