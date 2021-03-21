@@ -272,7 +272,9 @@
 	.header .container {
 		padding: 0;
 	}
-
+	.swiper-container {
+		display: none;
+	}
 	.container {
 		padding: 0 50px;
 	}

@@ -7,8 +7,19 @@
 		<title>Эвклид | Проектные системы</title>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<!-- <link rel="stylesheet" href="css/jquery-ui.min.css" /> -->
+		<!-- <link rel="stylesheet" href="css/jquery-ui.structure.min.css" /> -->
+		<!-- <link rel="stylesheet" href="css/jquery-ui.theme.min.css" /> -->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/media.css" />
+		<!-- <link rel="stylesheet" href="/resources/demos/style.css" /> -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -75,6 +86,8 @@
 		</header>
 		<main class="main">
 			<div class="container">
+				<!-- Slider main container -->
+
 				<div class="main-banner">
 					<h1 class="main-title">Проектные решения любой сложности</h1>
 					<p class="main-subtitile">
@@ -82,6 +95,27 @@
 						по сей день остаются уделом проектантов
 					</p>
 					<button class="main-button btn">Заказать расчёт</button>
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<img src="img/main-banner1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/main-banner2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="img/main-banner3.jpg" alt="" />
+							</div>
+							...
+						</div>
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -146,13 +180,19 @@
 			<div class="container">
 				<h2 class="general-title">Как мы работаем</h2>
 				<div class="how-buttons">
-					<a href="#" class="how-button" id="how1">1 шаг</a>
-					<a href="#" class="how-button" id="how2">2 шаг</a>
-					<a href="#" class="how-button" id="how3">3 шаг</a>
-					<a href="#" class="how-button" id="how4">4 шаг</a>
+					<a
+						href="#"
+						class="how-button tab-button-active"
+						id="how1"
+						data-path="one"
+						>1 шаг</a
+					>
+					<a href="#" class="how-button" id="how2" data-path="two">2 шаг</a>
+					<a href="#" class="how-button" id="how3" data-path="three">3 шаг</a>
+					<a href="#" class="how-button" id="how4" data-path="four">4 шаг</a>
 				</div>
 				<ul class="how-list">
-					<li class="how-listitem">
+					<li class="how-listitem tab-content-active" data-target="one">
 						<div class="how-wrapper">
 							<div class="how-text">
 								<h3 class="how-title">Проводим консультацию</h3>
@@ -176,10 +216,10 @@
 									><button class="btn btn2">Договор</button>
 								</div>
 							</div>
-							<div class="how-img"></div>
+							<div class="how-img how-img1"></div>
 						</div>
 					</li>
-					<li class="how-listitem">
+					<li class="how-listitem" data-target="two">
 						<div class="how-wrapper">
 							<div class="how-text">
 								<h3 class="how-title">Составляем смету</h3>
@@ -195,14 +235,14 @@
 									целой серии независимых исследований.
 								</p>
 							</div>
-							<div class="how-img"></div>
+							<div class="how-img how-img2"></div>
 						</div>
 						<div class="how-btn">
 							<button class="btn btn1">Подробнее</button
 							><button class="btn btn2">Договор</button>
 						</div>
 					</li>
-					<li class="how-listitem">
+					<li class="how-listitem" data-target="three">
 						<div class="how-wrapper">
 							<div class="how-text">
 								<h3 class="how-title">Привлекаем подрядчиков</h3>
@@ -221,14 +261,14 @@
 									задания по разработке прогресса профессионального сообщества.
 								</p>
 							</div>
-							<div class="how-img"></div>
+							<div class="how-img how-img3"></div>
 						</div>
 						<div class="how-btn">
 							<button class="btn btn1">Подробнее</button>
 							<button class="btn btn2">Договор</button>
 						</div>
 					</li>
-					<li class="how-listitem">
+					<li class="how-listitem" data-target="four">
 						<div class="how-wrapper">
 							<div class="how-text">
 								<h3 class="how-title">Инспектируем все этапы работ</h3>
@@ -244,7 +284,7 @@
 									позволяет.
 								</p>
 							</div>
-							<div class="how-img"></div>
+							<div class="how-img how-img4"></div>
 						</div>
 						<div class="how-btn">
 							<button class="btn btn1">Подробнее</button>
@@ -259,10 +299,10 @@
 				<h2 class="general-title faq-title">Часто задаваемые вопросы</h2>
 
 				<div class="faq-wrapper">
-					<ul class="faq-list">
+					<ul class="faq-list" id="accordion">
 						<li class="faq-listitem">
 							Из чего формируется конечная стоимость проекта?
-							<a href="#" class="faq-link"></a>
+							<a href="#" class="faq-link ui-accordion-header-collapsed"></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -478,5 +518,8 @@
 				</div>
 			</div>
 		</footer>
+		<script src="js/script.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</body>
 </html>

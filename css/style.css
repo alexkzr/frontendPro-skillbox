@@ -89,13 +89,32 @@ section {
 	padding-bottom: 10px;
 }
 /* Main */
+.main .container {
+	position: relative;
+}
+.swiper-container {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	color: var(--main-color);
+}
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background-color: var(--main-color);
+}
 .main-banner {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	/* justify-content: center; */
 	min-height: 620px;
-	background: url("../img/main-banner1.jpg") no-repeat center;
-	background-size: cover;
 	padding: 100px 0 80px 80px;
 }
 .main-title {
@@ -109,6 +128,7 @@ section {
 	margin-bottom: 32px;
 	color: #ffffff;
 	margin-top: 0;
+	z-index: 2;
 }
 .main-subtitile {
 	/* Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов */
@@ -119,6 +139,7 @@ section {
 	max-width: 800px;
 	color: #ffffff;
 	margin-bottom: 90px;
+	z-index: 2;
 }
 .main-button {
 	/* Frame 3 */
@@ -134,6 +155,7 @@ section {
 	text-align: center;
 	color: #ffffff;
 	font-weight: 700;
+	z-index: 2;
 }
 /* About */
 .general-title {
@@ -234,22 +256,30 @@ section {
 }
 
 /* HOW */
+.how-buttons .tab-button-active {
+	color: var(--main-active-color);
+}
 .how-button {
 	color: var(--main-font-color);
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 400;
 }
-
-.how-button:first-child {
+.how-listitem {
+	display: none;
+}
+.tab-content-active {
+	display: block;
+}
+.how-button:active {
 	color: var(--main-active-color);
 }
 .how-buttons {
 	margin-bottom: 50px;
 }
-.how-listitem:not(:first-child) {
+/* .how-listitem:not(:first-child) {
 	display: none;
-}
+} */
 .how-text {
 	max-width: 760px;
 	font-size: 16px;
@@ -261,11 +291,22 @@ section {
 	display: flex;
 }
 .how-img {
-	background: url("../img/section2-1.jpg") no-repeat center;
 	background-size: cover;
 	max-width: 870px;
 	min-height: 465px;
 	flex: 1 1 50%;
+}
+.how-img1 {
+	background: url("../img/section2-1.jpg") no-repeat center;
+}
+.how-img2 {
+	background: url("../img/section2-2.jpg") no-repeat center;
+}
+.how-img3 {
+	background: url("../img/section2-3.jpg") no-repeat center;
+}
+.how-img4 {
+	background: url("../img/section2-4.jpg") no-repeat center;
 }
 .btn1 {
 	margin-right: 30px;
@@ -287,6 +328,9 @@ section {
 /* FAQ */
 .faq-answer {
 	display: none;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 30px;
 }
 .faq-listitem {
 	position: relative;
@@ -298,8 +342,7 @@ section {
 .faq-link {
 	position: absolute;
 	right: -15px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 20px;
 	width: 50px;
 	height: 50px;
 	background-image: url("../img/section3-plusIcon.svg");
@@ -307,8 +350,15 @@ section {
 	background-color: #ececec;
 	background-position: center;
 	border-radius: 50%;
+	transition: transform 0.5s ease;
+	border: none;
+	outline: none;
 }
 
+.faq-link_clicked {
+	transition: transform 0.3s ease;
+	transform: rotate(45deg);
+}
 /* footer */
 .footer * {
 	color: #cacaca;
