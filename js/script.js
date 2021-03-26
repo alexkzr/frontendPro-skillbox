@@ -23,7 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				.classList.add("tab-content-active");
 		});
 	});
+	//burger menu
+	const burger = document.querySelector(".header-burger");
+	const navBar = document.querySelector(".nav-list");
 
+	burger.addEventListener("click", (e) => {
+		navBar.classList.toggle("nav-list_active");
+		burger.classList.toggle("header-burger_active");
+	});
 	//initialize swiper
 	const swiper = new Swiper(".swiper-container", {
 		// Optional parameters
@@ -57,4 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
 			e.target.classList.toggle("faq-link_clicked");
 		});
 	});
+	//swiper code end
 });

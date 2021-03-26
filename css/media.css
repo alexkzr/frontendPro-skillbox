@@ -102,9 +102,13 @@
 }
 @media (max-width: 1024px) {
 	/* HEADER */
-	.nav-list_item:not(:last-child) {
-		display: none;
+	.nav-list {
+		position: absolute;
+		right: 0;
+		flex-direction: column;
+		transform: translateY(-200%);
 	}
+
 	.nav-list_item {
 		padding-bottom: 0;
 	}
@@ -115,6 +119,7 @@
 	.header-burger {
 		cursor: pointer;
 		display: block;
+		z-index: 5;
 	}
 	.header_nav {
 		margin: 0;
@@ -170,7 +175,10 @@
 	}
 	/* HOW */
 	.how .general-title {
-		margin-bottom: 35px;
+		margin-bottom: 45px;
+	}
+	.how-buttons {
+		margin-bottom: 40px;
 	}
 	.how-descr {
 		margin-bottom: 20px;
@@ -180,6 +188,9 @@
 	}
 	.how-text {
 		margin-right: 50px;
+	}
+	.how-img {
+		background-size: cover !important;
 	}
 	/* FAQ */
 	section.faq {
@@ -198,6 +209,7 @@
 	}
 	.faq-link {
 		right: 0;
+		top: 35px;
 	}
 	.faq .general-title {
 		width: 91vw;
@@ -217,6 +229,9 @@
 	}
 	.footer-social {
 		margin-bottom: 0;
+	}
+	.footer-form {
+		padding-top: 0;
 	}
 	.footer-form_button {
 		margin-right: 10px;
