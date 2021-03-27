@@ -1,12 +1,14 @@
-* {
-	box-sizing: border-box;
-	font-family: Montserrat, sans-serif;
-}
-
 :root {
 	--main-color: #ff9900;
 	--main-active-color: #e1670e;
 	--main-font-color: #333;
+}
+* {
+	box-sizing: border-box;
+	font-family: Montserrat, sans-serif;
+}
+*:focus {
+	outline: 2px solid #ff9900;
 }
 p {
 	margin: 0;
@@ -32,7 +34,6 @@ section {
 	color: #fff;
 	font-weight: 700;
 	border: 0px solid transparent;
-	outline: 0px solid transparent;
 }
 .container {
 	max-width: 1920px;
@@ -424,7 +425,6 @@ ul.nav-list.nav-list_active .nav-list_item {
 	border-radius: 50%;
 	transition: transform 1s ease;
 	border: none;
-	outline: none;
 }
 
 .faq-link_clicked {

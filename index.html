@@ -45,8 +45,8 @@
 						</li>
 					</ul>
 					<div class="nav-search">
-						<a href="#" class="nav-search_link"
-							><svg
+						<a href="#" class="nav-search_link" aria-label="Поиск">
+							<svg
 								width="26"
 								height="26"
 								viewBox="0 0 26 26"
@@ -67,8 +67,9 @@
 									r="10.5"
 									stroke="#333333"
 									stroke-width="2"
-								/></svg
-						></a>
+								/>
+							</svg>
+						</a>
 					</div>
 				</nav>
 			</div>
@@ -83,7 +84,9 @@
 						Есть над чем задуматься: базовые сценарии поведения пользователей и
 						по сей день остаются уделом проектантов
 					</p>
-					<button class="main-button btn">Заказать расчёт</button>
+					<button class="main-button btn" aria-label="Заказать расчет">
+						Заказать расчёт
+					</button>
 					<div class="swiper-container">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
@@ -291,7 +294,11 @@
 					<ul class="faq-list" id="accordion">
 						<li class="faq-listitem">
 							Из чего формируется конечная стоимость проекта?
-							<a href="#" class="faq-link ui-accordion-header-collapsed"></a>
+							<a
+								href="#"
+								tabindex="1"
+								class="faq-link ui-accordion-header-collapsed"
+							></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -318,7 +325,7 @@
 						<li class="faq-listitem">
 							У меня есть свой проект. Сможем ли мы его доработать /
 							реализовать?
-							<a href="" class="faq-link"></a>
+							<a href="" tabindex="2" class="faq-link"></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -344,7 +351,7 @@
 						</li>
 						<li class="faq-listitem">
 							Я выбираю между разными компаниями. В чём ваше отличие?
-							<a href="" class="faq-link"></a>
+							<a href="" tabindex="3" class="faq-link"></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -371,7 +378,7 @@
 						<li class="faq-listitem">
 							Могу ли я делегировать вам работу / согласование с подрядчиком /
 							организацией?
-							<a href="" class="faq-link"></a>
+							<a href="" tabindex="4" class="faq-link"></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -397,7 +404,7 @@
 						</li>
 						<li class="faq-listitem">
 							Могу ли я вернуть деньги на каком-либо из этапов работ?
-							<a href="" class="faq-link"></a>
+							<a href="" tabindex="5" class="faq-link"></a>
 							<p class="faq-answer">
 								Являясь всего лишь частью общей картины, непосредственные
 								участники технического прогресса призывают нас к новым
@@ -456,9 +463,21 @@
 							</li>
 						</ul>
 						<div class="footer-social">
-							<a href="#" class="footer-social_link fb"></a
-							><a href="#" class="footer-social_link vk"></a
-							><a href="#" class="footer-social_link instagram"></a>
+							<a
+								href="#"
+								class="footer-social_link fb"
+								aria-label="ссылка на фейсбук"
+							></a
+							><a
+								href="#"
+								class="footer-social_link vk"
+								aria-label="ссылка на вк"
+							></a
+							><a
+								href="#"
+								class="footer-social_link instagram"
+								aria-label="ссылка на инстаграмм"
+							></a>
 						</div>
 					</div>
 					<form action="#" class="footer-form">
@@ -490,7 +509,12 @@
 									id="checkbox"
 									checked
 								/>
-								<label for="checkbox" class="footer-check_label" id="checkLabel"
+								<label
+									for="checkbox"
+									tabindex="0"
+									class="footer-check_label"
+									id="checkLabel"
+									aria-checked="true"
 									>Согласен на обработку данных</label
 								>
 							</div>
