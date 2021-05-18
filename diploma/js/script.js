@@ -299,22 +299,118 @@ document.addEventListener("DOMContentLoaded", () => {
     let width = window.innerWidth;
     let tooltipBtn = document.querySelectorAll(".projects-tooltip");
 
-    if (width <= 480) {
-      tooltipBtn.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
+    tooltipBtn.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (width <= 480) {
           e.target.classList.toggle("tooltip-close");
-          console.log("target", e.target);
-          if (e.target.classList.contains("tooltip-close")) {
-            console.log("contains");
-            e.target.textContent = "x";
-          } else {
-            e.target.textContent = "i";
-          }
-        });
+        }
       });
-    }
+    });
   };
   tooltipCloser();
   getFilters();
+
+  //logotype slider in Projects
+  //projects-slider
+  $(".projects-slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    prevArrow:
+      '<button type="button" class="projects-slick-prev">Previous</button>',
+    nextArrow:
+      '<button type="button" class="projects-slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  const projectsNext = document.querySelector(".projects-slick-next");
+  const projectsPrev = document.querySelector(".projects-slick-prev");
+  projectsNext.textContent = ">";
+  projectsPrev.textContent = "<";
+
+  //map
+  var myMap;
+
+  // Дождёмся загрузки API и готовности DOM.
+  ymaps.ready(init);
+
+  function init() {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map("map", {
+      // При инициализации карты обязательно нужно указать
+      // её центр и коэффициент масштабирования.
+      center: [55.75, 37.6], // Москва
+      zoom: 14,
+    });
+    myMap.behaviors
+      // Отключаем часть включенных по умолчанию поведений:
+      //  - drag - перемещение карты при нажатой левой кнопки мыши;
+      //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+      .disable(["drag", "rightMouseButtonMagnifier", "scrollZoom"])
+      // Включаем линейку.
+      .enable("ruler");
+
+    myMap.controls
+      .remove("trafficControl")
+      .remove("mapTools")
+      .remove("typeSelector")
+      .remove("mapTools");
+    var myPlacemark1 = new ymaps.Placemark(
+      [55.75, 37.6],
+      {
+        hintContent: "A custom placemark icon with contents",
+        balloonContent: "This one — for Christmas",
+        iconContent: "12",
+      },
+      {
+        /**
+         * Options.
+         * You must specify this type of layout.
+         */
+        iconLayout: "default#imageWithContent",
+        // Custom image for the placemark icon.
+        iconImageHref: "../img/placemark.png",
+        // The size of the placemark.
+        iconImageSize: [20, 20],
+        /**
+         * The offset of the upper left corner of the icon relative
+         * to its "tail" (the anchor point).
+         */
+        iconImageOffset: [-24, -24],
+        // Offset of the layer with content relative to the layer with the image.
+        iconContentOffset: [15, 15],
+        // Content layout.
+      }
+    );
+    // myPlacemark1 = new ymaps.Placemark(
+    //   [55.758468, 37.601088],
+    //   {
+    //     // Свойства.
+    //     hintContent: "Леонтьевский переулок, 5 строение 1",
+    //   },
+    //   {
+    //     // Опции.
+    //     // Своё изображение иконки метки.
+    //     iconImageHref: "../img/placemark.png",
+    //     // Размеры метки.
+    //     iconImageSize: [30, 30],
+    //     // Смещение левого верхнего угла иконки относительно
+    //   }
+    // );
+    myMap.geoObjects.add(myPlacemark1);
+  }
 });

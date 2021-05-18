@@ -5,6 +5,9 @@
 * {
   font-family: "Open Sans", sans-serif;
 }
+a {
+  color: var(--main-color);
+}
 .btn {
   font-style: normal;
   font-weight: bold;
@@ -495,7 +498,9 @@ section {
 .gallery-slick-next,
 .gallery-slick-prev,
 .books-slick-prev,
-.books-slick-next {
+.books-slick-next,
+.projects-slick-prev,
+.projects-slick-next {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -864,8 +869,8 @@ a.events-link {
   border-left: 1px solid var(--main-color);
 }
 
-.choices__item.choices__item--selectable,
-.choices__item.is-highlighted {
+.books-filters .choices__item.choices__item--selectable,
+.books-filters .choices__item.is-highlighted {
   background-color: transparent !important;
   color: var(--main-color);
   border: none !important;
@@ -895,6 +900,10 @@ a.events-link {
   background: url("../img/filters-dot.png") no-repeat center center;
 }
 /*PROJECTS*/
+.projects {
+  background-color: #fff;
+  color: #333;
+}
 .tooltip-text {
   position: absolute;
   display: none;
@@ -934,4 +943,162 @@ a.events-link {
   border-radius: 50%;
   text-align: center;
   font-size: 12px;
+}
+.projects-text {
+  margin-bottom: 30px;
+}
+.projects-subheading {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+.tooltip-close .tooltip-text {
+  display: inline-block;
+}
+.tooltip-close {
+  position: relative;
+  color: var(--main-color) !important;
+}
+.tooltip-close::before,
+.tooltip-close::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 12px;
+  background-color: #fff;
+}
+.tooltip-close::before {
+  left: 6px;
+  bottom: 3px;
+  transform: rotate(45deg) translateX(-50%);
+}
+.tooltip-close::after {
+  transform: rotate(135deg) translateX(-50%);
+  right: 6px;
+  bottom: 3px;
+}
+.projects-img {
+  max-width: 100%;
+  filter: grayscale();
+}
+.projects-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-slick-prev {
+  margin-right: 40px;
+}
+.projects-slick-next {
+  margin-left: 40px;
+}
+.projects-slider > .slick-list > .slick-track > .slick-slide {
+  margin-right: 30px;
+}
+.projects-slider > .slick-list > .slick-track > .slick-slide:hover img {
+  filter: none;
+}
+/*contacts*/
+.contacts {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 700px;
+  background-color: #fff;
+  color: #333;
+}
+.contacts-wrapper {
+  display: flex;
+  height: 100%;
+}
+.contacts-wrapper > .container {
+  flex-basis: 40%;
+  width: 100%;
+  height: 700px;
+  padding-right: 0;
+}
+#map {
+  flex-basis: 60%;
+  height: 100%;
+  width: 100%;
+}
+#map iframe {
+  height: 700px;
+  width: 100%;
+}
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #cacaca;
+  box-sizing: border-box;
+  height: 100%;
+  /* padding-left: 100px; */
+  align-items: flex-start;
+}
+.contacts-info > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 100%;
+  /* padding-left: 100px; */
+  align-items: flex-start;
+}
+.contacts-input {
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 100px;
+  height: 40px;
+  max-width: 400px;
+  width: 400px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.contacts-subheading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+.contacts-descr {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 30px;
+}
+.contacts-call {
+  margin-bottom: 20px;
+}
+.contacts-form > .btn {
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: 0;
+}
+[class*="ymaps-2-1"][class*="-ground-pane"] {
+  filter: grayscale();
+}
+/*FOOTER*/
+
+.footer {
+  background: #000;
+  height: 140px;
+}
+.footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: block;
+}
+.footer-media:not(:last-child) {
+  margin-right: 20px;
 }

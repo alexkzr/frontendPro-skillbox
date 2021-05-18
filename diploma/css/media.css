@@ -76,6 +76,9 @@
   section.main-section {
     padding-top: 0;
   }
+  .contacts-input {
+    width: 335px;
+  }
 }
 @media (max-width: 768px) {
   .galery-wrapper {
@@ -114,6 +117,16 @@
   .lang {
     padding-left: 0;
     margin-top: 0;
+  }
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contacts-wrapper > .container {
+    padding-left: 0;
+  }
+  .contacts {
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
