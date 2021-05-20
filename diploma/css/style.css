@@ -8,6 +8,10 @@
 a {
   color: var(--main-color);
 }
+body {
+  position: relative;
+  z-index: 1;
+}
 .btn {
   font-style: normal;
   font-weight: bold;
@@ -384,6 +388,85 @@ section {
   background: url("../img/galery-bg.jpg") no-repeat center;
   background-size: cover;
 }
+.galery-hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 85%;
+  height: 85%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hover-img {
+  height: 80px;
+  width: 80px !important;
+}
+
+.galery-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  max-width: 900px;
+  height: 500px;
+  z-index: 3;
+}
+.overlay {
+  display: none;
+}
+.overlay-active {
+  position: fixed;
+  display: block;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.modal-active + .galery-modal {
+  display: flex;
+}
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-author {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+}
+.modal-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+.modal-period {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #969696;
+  margin-bottom: 40px;
+}
+.modal-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+.gallery-slide:hover .galery-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .gallery-filter .choices__list {
   height: auto;
   background: transparent;
@@ -489,7 +572,9 @@ section {
   display: flex;
 } */
 .gallery-slide {
+  position: relative;
   margin-bottom: 30px;
+  z-index: 0;
 }
 .gallery-slide:not(:last-child) {
   margin-right: 30px;
@@ -535,6 +620,7 @@ section {
 }
 .gallery-slide img {
   width: 100%;
+  z-index: -1;
 }
 /*Catalog*/
 .catalog {

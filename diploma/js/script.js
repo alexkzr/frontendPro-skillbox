@@ -413,4 +413,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // );
     myMap.geoObjects.add(myPlacemark1);
   }
+  //galery modal script
+  let pageOverlay = document.querySelector(".overlay");
+  let galeryModals = document.querySelectorAll(".galery-modal");
+  let galeryImg = document.querySelectorAll(".hover-img");
+  let modalFunction = (slide) => {
+    slide.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.target.classList.toggle("modal-active");
+        console.log("e.target", e.target);
+        pageOverlay.classList.toggle("overlay-active");
+        // galeryModals.forEach((elem) => {
+        //   elem.classList.toggle("modal-active");
+        // });
+      });
+    });
+  };
+  pageOverlay.addEventListener("click", (e) => {
+    e.preventDefault();
+    pageOverlay.classList.toggle("overlay-active");
+  });
+  modalFunction(slides);
+  modalFunction(galeryImg);
 });
