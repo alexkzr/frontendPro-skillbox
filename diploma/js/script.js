@@ -414,26 +414,25 @@ document.addEventListener("DOMContentLoaded", () => {
     myMap.geoObjects.add(myPlacemark1);
   }
   //galery modal script
-  let pageOverlay = document.querySelector(".overlay");
   let galeryModals = document.querySelectorAll(".galery-modal");
   let galeryImg = document.querySelectorAll(".hover-img");
-  let modalFunction = (slide) => {
-    slide.forEach((elem) => {
-      elem.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.target.classList.toggle("modal-active");
-        console.log("e.target", e.target);
-        pageOverlay.classList.toggle("overlay-active");
-        // galeryModals.forEach((elem) => {
-        //   elem.classList.toggle("modal-active");
-        // });
-      });
-    });
-  };
-  pageOverlay.addEventListener("click", (e) => {
+  const sliderGalery = document.querySelector(".slider-gallery");
+  let modalWrapper = document.querySelectorAll(".modal-wrapper");
+  sliderGalery.addEventListener("click", (e) => {
     e.preventDefault();
-    pageOverlay.classList.toggle("overlay-active");
+    if (
+      e.target.classList.contains("galery-hover") ||
+      e.target.classList.contains("modal-wrapper")
+    ) {
+      console.log("e contains galhov");
+      e.target.nextElementSibling.classList.toggle("modal-active");
+    } else if (
+      !e.target.classList.contains("modal-wrapper") ||
+      !e.target.classList.contains("galery-modal")
+    ) {
+      modalWrapper.forEach((elem) => {
+        elem.classList.remove("modal-active");
+      });
+    }
   });
-  modalFunction(slides);
-  modalFunction(galeryImg);
 });
