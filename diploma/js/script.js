@@ -53,8 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerRow: 3,
     rows: 2,
     prevArrow:
-      '<button type="button" class="gallery-slick-prev">Previous</button>',
-    nextArrow: '<button type="button" class="gallery-slick-next">Next</button>',
+      '<button type="button" class="gallery-slick-prev"><span class="arrow-left"></span></button>',
+    nextArrow:
+      '<button type="button" class="gallery-slick-next"><span class="arrow-right"></span></button>',
     responsive: [
       {
         breakpoint: 1200,
@@ -97,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
   pagination.appendChild(owlPrev);
   pagination.appendChild(owlNext);
   pagination.insertBefore(pageNumber, owlNext);
-  owlNext.textContent = ">";
-  owlPrev.textContent = "<";
   var numberFunction = function () {
     var numbers = Array.from(
       document.getElementsByClassName("galery-slide")
@@ -134,8 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination.appendChild(owlPrev);
     pagination.appendChild(owlNext);
     pagination.insertBefore(pageNumber, owlNext);
-    owlNext.textContent = ">";
-    owlPrev.textContent = "<";
     slideClass();
   });
   //change position of the pagination in the DOM tree on certain breakpoints
@@ -184,8 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
     infinite: false,
     slidesToShow: 3,
     prevArrow:
-      '<button type="button" class="books-slick-prev">Previous</button>',
-    nextArrow: '<button type="button" class="books-slick-next">Next</button>',
+      '<button type="button" class="books-slick-prev"><span class="arrow-left"></span></button>',
+    nextArrow:
+      '<button type="button" class="books-slick-next"><span class="arrow-right"></span></button>',
     responsive: [
       {
         breakpoint: 1024,
@@ -224,8 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
     paginationBooks.appendChild(booksPrev);
     paginationBooks.appendChild(booksNext);
     paginationBooks.insertBefore(bookNumber, booksNext);
-    booksNext.textContent = ">";
-    booksPrev.textContent = "<";
   }
   var numberFunction = function () {
     var numbers = Array.from(
@@ -265,8 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
     paginationBooks.appendChild(booksPrev);
     paginationBooks.appendChild(booksNext);
     paginationBooks.insertBefore(bookNumber, booksNext);
-    booksNext.textContent = ">";
-    booksPrev.textContent = "<";
     slideClass2();
   });
   //custom checkbox for books filters
@@ -317,9 +311,9 @@ document.addEventListener("DOMContentLoaded", () => {
     infinite: true,
     slidesToShow: 3,
     prevArrow:
-      '<button type="button" class="projects-slick-prev">Previous</button>',
+      '<button type="button" class="projects-slick-prev"><span class="arrow-left"></span></button>',
     nextArrow:
-      '<button type="button" class="projects-slick-next">Next</button>',
+      '<button type="button" class="projects-slick-next"><span class="arrow-right"></span></button>',
     responsive: [
       {
         breakpoint: 1024,
@@ -338,8 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectsNext = document.querySelector(".projects-slick-next");
   const projectsPrev = document.querySelector(".projects-slick-prev");
-  projectsNext.textContent = ">";
-  projectsPrev.textContent = "<";
 
   //map
   var myMap;
@@ -396,43 +388,24 @@ document.addEventListener("DOMContentLoaded", () => {
         // Content layout.
       }
     );
-    // myPlacemark1 = new ymaps.Placemark(
-    //   [55.758468, 37.601088],
-    //   {
-    //     // Свойства.
-    //     hintContent: "Леонтьевский переулок, 5 строение 1",
-    //   },
-    //   {
-    //     // Опции.
-    //     // Своё изображение иконки метки.
-    //     iconImageHref: "../img/placemark.png",
-    //     // Размеры метки.
-    //     iconImageSize: [30, 30],
-    //     // Смещение левого верхнего угла иконки относительно
-    //   }
-    // );
     myMap.geoObjects.add(myPlacemark1);
   }
   //galery modal script
   let galeryModals = document.querySelectorAll(".galery-modal");
   let galeryImg = document.querySelectorAll(".hover-img");
   const sliderGalery = document.querySelector(".slider-gallery");
-  let modalWrapper = document.querySelectorAll(".modal-wrapper");
+  let modalWrapper = document.querySelector(".modal-wrapper");
+  let modalImg = document.querySelector(".modalImg");
   sliderGalery.addEventListener("click", (e) => {
     e.preventDefault();
-    if (
-      e.target.classList.contains("galery-hover") ||
-      e.target.classList.contains("modal-wrapper")
-    ) {
-      console.log("e contains galhov");
-      e.target.nextElementSibling.classList.toggle("modal-active");
-    } else if (
-      !e.target.classList.contains("modal-wrapper") ||
-      !e.target.classList.contains("galery-modal")
-    ) {
-      modalWrapper.forEach((elem) => {
-        elem.classList.remove("modal-active");
-      });
+    if (e.target.classList.contains("galery-hover")) {
+      modalWrapper.classList.toggle("modal-active");
+      let galSrc = e.target.nextElementSibling.src;
+      modalImg.src = galSrc;
     }
+  });
+  modalWrapper.addEventListener("click", (e) => {
+    e.preventDefault();
+    modalWrapper.classList.remove("modal-active");
   });
 });

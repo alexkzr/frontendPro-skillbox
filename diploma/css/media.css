@@ -1,3 +1,255 @@
+/*Pixel Perfect Layout for  1920*/
+@media (min-width: 1910px) {
+  .header-wrapper .container {
+    justify-content: flex-start;
+    padding: 0 135px 0 160px;
+  }
+  .header-wrapper .logo {
+    margin-right: 180px;
+  }
+  .header_list {
+    margin-right: 273px;
+  }
+  .main-search {
+    margin-left: 286px;
+  }
+  .search-input {
+    width: 220px;
+  }
+  .login {
+    padding-left: 23px;
+  }
+  .login::before {
+    left: 3px;
+  }
+  .hero-descr {
+    padding-left: 4px;
+    max-width: 570px;
+    margin-bottom: 93px;
+  }
+  .hero-btn {
+    padding: 22px 37px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 62px;
+  }
+  .about .general-title {
+    margin-bottom: 16px;
+  }
+  .galery {
+    padding: 80px 0 55px;
+  }
+  .galery .general-title {
+    margin-bottom: 22px;
+  }
+  .galery-descr {
+    margin-bottom: 14px;
+  }
+  .galery-filters {
+    flex-basis: 30%;
+    padding-right: 0;
+  }
+  .gallery-filter .choices__list--single .choices__item {
+    text-align: left;
+    font-size: 16px;
+  }
+  .gallery-filter .choices__inner {
+    padding-left: 10px;
+  }
+  .gallery-slides {
+    margin-top: -98px;
+  }
+  .pagination-gallery > .slick-arrow {
+    margin-right: 20px;
+  }
+  .pagination_gallery,
+  .pagination_books {
+    margin-right: 20px;
+  }
+  div.galery-slide > div > a.galllery-slide {
+    width: 30%;
+  }
+  .gallery-descr.bottom {
+    padding-bottom: 6px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    max-width: 400px;
+  }
+  .catalog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .catalog-info {
+    flex-basis: 48%;
+    margin-right: 40px;
+  }
+  .ui-accordion .ui-accordion-header::after {
+    right: -10px;
+  }
+  .ui-accordion .ui-accordion-content {
+    padding-left: 0px;
+    padding-top: 31px;
+    justify-content: flex-start;
+  }
+  .ui-accordion .ui-accordion-content > .row:not(:last-child) {
+    margin-right: 55px;
+  }
+  .ui-accordion .ui-accordion-content > .row:nth-child(2) {
+    margin-right: 75px;
+  }
+  span.ui-accordion-header-icon {
+    display: none;
+  }
+  .catalog .general-title {
+    margin-bottom: 14px;
+  }
+  .catalog-wrapper {
+    margin-bottom: 93px;
+  }
+  .catalog .container {
+    padding: 0 150px 0 160px;
+  }
+  .events > .container {
+    padding: 0 140px 0 160px;
+  }
+  .events > .general-title {
+    margin-bottom: 14px;
+  }
+
+  .events-wrapper {
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+  a.events-link {
+    line-height: 25px;
+    bottom: 40px;
+    left: 51px;
+  }
+  .events-card {
+    margin-left: 0;
+    flex-basis: auto;
+    width: 500px;
+    max-width: 500px;
+  }
+  .events-card:not(:nth-child(3)) {
+    margin-right: 50px;
+  }
+  .events-heading {
+    margin-bottom: 4px;
+  }
+  .img-descr {
+    /* max-width: 125px; */
+    margin-right: 16px;
+    margin-bottom: 3px;
+  }
+  .events-img {
+    margin-bottom: 17px;
+  }
+  .books {
+    padding: 80px 0 60px;
+  }
+  .books > .container > .general-title {
+    margin-bottom: 20px;
+  }
+  .books > .container {
+    padding: 0 140px 0 160px;
+  }
+  .book-slides_wrapper {
+    margin-top: -50px;
+    padding-left: 30px;
+  }
+  .books-wrapper {
+    align-items: flex-start;
+  }
+  .filters-heading {
+    margin-bottom: 6px;
+  }
+  .filters-label {
+    margin-bottom: 7px;
+    padding-left: 27px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .filters-list {
+    margin-bottom: 30px;
+  }
+  .filters-pricing > .filters-heading {
+    margin-bottom: 15px;
+  }
+  .pricing-par {
+    padding: 15px 0 10px 10px;
+  }
+  .books-pagination {
+    padding-left: 20px;
+  }
+  .projects {
+    padding-top: 80px;
+    padding-bottom: 73px;
+  }
+  .projects > .container > .general-title {
+    margin-bottom: 15px;
+  }
+  a.project-logo {
+    display: flex !important;
+    width: 450px;
+    height: 150px;
+  }
+  .projects-slider > .slick-list > .slick-track {
+    display: flex;
+    justify-content: space-between;
+  }
+  .projects-wrapper {
+    width: 102%;
+  }
+  .contacts {
+    padding-bottom: 5px;
+  }
+  .contacts-info > .container {
+    padding-left: 0;
+    padding-right: 120px;
+    justify-content: flex-start;
+    margin-top: 130px;
+  }
+  .contacts-descr {
+    margin-bottom: 35px;
+  }
+  .contacts-call {
+    margin-bottom: 15px;
+  }
+  .contacts-input {
+    margin-bottom: 25px;
+  }
+  .contacts-input:nth-child(2) {
+    margin-bottom: 22px;
+  }
+  .contacts-form > .btn {
+    padding: 15px 34px;
+    margin-bottom: 38px;
+  }
+  a.whatsapp,
+  a.tg {
+    height: 100%;
+  }
+  a.whatsapp {
+    margin-right: 18px;
+  }
+  footer.footer > .container {
+    padding: 0 140px 0 160px;
+  }
+  .footer-media:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+
+/*End of Pixel Perfect*/
 @media (min-width: 481px) {
   .dn1024 {
     display: none !important;
