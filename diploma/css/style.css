@@ -113,6 +113,14 @@ body {
   width: 24px;
   bottom: -8px;
 }
+.header-nav {
+  display: flex;
+  list-style: none;
+  /* width: 900px; */
+  justify-content: space-between;
+  margin-right: 20px;
+  padding-left: 0;
+}
 .header_list {
   display: flex;
   list-style: none;
@@ -726,6 +734,9 @@ section {
 .lang-link {
   display: block;
   height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 .lang-list:not(:last-child) {
   margin-right: 50px;
@@ -744,6 +755,7 @@ section {
   font-size: 16px;
   line-height: 32px;
 }
+
 .catalog-wrapper {
   display: flex;
   margin-bottom: 50px;
@@ -772,6 +784,46 @@ section {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 0;
+}
+.catalog-tab {
+  display: none;
+}
+.catalog-active {
+  display: flex;
+}
+.divWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.outline-active {
+  border: 2px solid var(--main-color);
+}
+.lang-link {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+.lang-fr {
+  background-image: url("../img/flag1.png");
+}
+.lang-de {
+  background-image: url("../img/flag2.png");
+}
+.lang-it {
+  background-image: url("../img/flag3.png");
+}
+.lang-ru {
+  background-image: url("../img/flag4.png");
+}
+.lang-bl {
+  background-image: url("../img/flag5.png");
 }
 /*accordion styles*/
 .ui-accordion .ui-accordion-header {
@@ -846,12 +898,18 @@ section {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
 /* .events-card:not(:nth-child(3n)) {
   margin-right: 50px;
 } */
 .event-card_container {
   padding: 0 50px 50px 50px;
   height: 100%;
+  min-height: 438px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .events-img {
   margin-bottom: 10px;
@@ -881,14 +939,13 @@ section {
   margin-bottom: 10px;
 }
 a.events-link {
-  position: absolute;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
-  bottom: 30px;
-  left: 50px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 .events-hidden {
   display: none;
@@ -1147,6 +1204,7 @@ a.events-link {
   border-radius: 50%;
   text-align: center;
   font-size: 12px;
+  line-height: 16px;
 }
 .projects-text {
   margin-bottom: 20px;
@@ -1316,6 +1374,11 @@ a.events-link {
 .logo {
   display: block;
 }
-.footer-media:not(:last-child) {
+.media {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.media-item:not(:last-child) {
   margin-right: 20px;
 }

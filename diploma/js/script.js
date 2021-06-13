@@ -408,4 +408,65 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     modalWrapper.classList.remove("modal-active");
   });
+
+  //languages tabs
+  const lang = document.querySelector(".lang");
+  let langLinks = document.querySelectorAll(".lang-link");
+  let tabActive = document.querySelector(".tab-active");
+  let tab = document.querySelectorAll(".catalog-tab");
+  let divWrap = document.querySelectorAll(".divWrap");
+
+  const tabfunction = (el) => {
+    let tar = document.querySelectorAll(el);
+    tar.forEach((elem) => {
+      elem.classList.toggle("catalog-active");
+    });
+  };
+
+  lang.addEventListener("click", (e) => {
+    divWrap.forEach((elem) => {
+      elem.classList.remove("outline-active");
+    });
+
+    if (e.target.classList.contains("lang-ru")) {
+      tab.forEach((elem) => {
+        elem.classList.remove("catalog-active");
+      });
+      tabfunction(".catalog-ru");
+      e.target.parentNode.classList.toggle("outline-active");
+    } else if (e.target.classList.contains("lang-fr")) {
+      tab.forEach((elem) => {
+        elem.classList.remove("catalog-active");
+      });
+      tabfunction(".catalog-fr");
+      e.target.parentNode.classList.toggle("outline-active");
+    } else if (e.target.classList.contains("lang-de")) {
+      tab.forEach((elem) => {
+        elem.classList.remove("catalog-active");
+      });
+      tabfunction(".catalog-de");
+      e.target.parentNode.classList.toggle("outline-active");
+    } else if (e.target.classList.contains("lang-it")) {
+      tab.forEach((elem) => {
+        elem.classList.remove("catalog-active");
+      });
+      tabfunction(".catalog-it");
+      e.target.parentNode.classList.toggle("outline-active");
+    } else if (e.target.classList.contains("lang-bl")) {
+      tab.forEach((elem) => {
+        elem.classList.remove("catalog-active");
+      });
+      tabfunction(".catalog-bl");
+      e.target.parentNode.classList.toggle("outline-active");
+    } else if (
+      !e.target.classList.contains("lang-ru") ||
+      !e.target.classList.contains("lang-fr") ||
+      e.target.classList.contains("lang-de") ||
+      e.target.classList.contains("lang-it") ||
+      e.target.classList.contains("lang-bl")
+    ) {
+      console.log("misclicked");
+      return;
+    }
+  });
 });

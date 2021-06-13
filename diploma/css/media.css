@@ -250,7 +250,16 @@
 }
 
 /*End of Pixel Perfect*/
+
 @media (min-width: 481px) {
+  .dn1024:not(.main-search) {
+    display: none !important;
+  }
+  .projects-tooltip:hover .tooltip-text {
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
   .dn1024 {
     display: none !important;
   }
