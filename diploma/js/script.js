@@ -7,6 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgetBtn = document.querySelector(".burger");
   const searchButton = document.querySelector(".search-button");
   const searchInput = document.querySelector(".search-input");
+  const loginHeader = document.querySelector(".header_login");
+  let headerLogin = loginHeader.cloneNode(true);
+  let anchorLinks = document.querySelectorAll("a");
+  let dropdownLinks = document.querySelectorAll(".choices__item");
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".choices__item"),
+    (el) => new SimpleBar()
+  );
+  dropdownLinks.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      elem.classList.toggle("link-visited");
+    });
+  });
+  anchorLinks.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      elem.classList.toggle("link-visited");
+    });
+  });
 
   listItem.classList.add("header_listitem");
 
@@ -25,9 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach((elem) => {
       const choices = new Choices(elem, {
         searchEnabled: false,
-        placeholder: true,
         itemSelectText: "",
-        placeholderValue: null,
       });
     });
 
@@ -46,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   burgetBtn.addEventListener("click", (e) => {
     headerList.classList.toggle("header_list-active");
+    burgetBtn.classList.toggle("burger-active");
+    headerList.appendChild(headerLogin);
+    headerLogin.classList.toggle("headerLog-active");
   });
 
   $(".slider-gallery").slick({

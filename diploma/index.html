@@ -30,6 +30,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -92,6 +97,11 @@
                 </option>
                 <option value="Леонардо" class="dropdown-item">Леонардо</option>
                 <option value="Фридрих" class="dropdown-item">Фридрих</option>
+                <option value="Верроккьо" class="dropdown-item">
+                  Верроккьо
+                </option>
+                <option value="Леонардо" class="dropdown-item">Леонардо</option>
+                <option value="Фридрих" class="dropdown-item">Фридрих</option>
                 <option value="Тинторетто" class="dropdown-item">
                   Тинторетто
                 </option>
@@ -102,11 +112,19 @@
                 <option value="Мане" class="dropdown-item">Мане</option>
                 <option value="Сислей" class="dropdown-item">Сислей</option>
                 <option value="Моне" class="dropdown-item">Моне</option>
+                <option value="Ренуар" class="dropdown-item">Ренуар</option>
+                <option value="Мане" class="dropdown-item">Мане</option>
+                <option value="Сислей" class="dropdown-item">Сислей</option>
+                <option value="Моне" class="dropdown-item">Моне</option>
               </select>
               <select class="dropdown-list dropdown3">
                 <option value="" class="dropdown-link">
                   Постимпрессионизм
                 </option>
+                <option value="Сёра" class="dropdown-item">Сёра</option>
+                <option value="Гоген" class="dropdown-item">Гоген</option>
+                <option value="Сезанн" class="dropdown-item">Сезанн</option>
+                <option value="ВанГог" class="dropdown-item">Ван Гог</option>
                 <option value="Сёра" class="dropdown-item">Сёра</option>
                 <option value="Гоген" class="dropdown-item">Гоген</option>
                 <option value="Сезанн" class="dropdown-item">Сезанн</option>
@@ -122,9 +140,21 @@
                 <option value="Кандинский" class="dropdown-item">
                   Кандински
                 </option>
+                <option value="Пикассо" class="dropdown-item">Пикассо</option>
+                <option value="Малевич" class="dropdown-item">Малевич</option>
+                <option value="Маринетти" class="dropdown-item">
+                  Маринетти
+                </option>
+                <option value="Кандинский" class="dropdown-item">
+                  Кандински
+                </option>
               </select>
               <select class="dropdown-list dropdown5">
                 <option value="" class="dropdown-link">Футуризм</option>
+                <option value="Балла" class="dropdown-item">Балла</option>
+                <option value="Северини" class="dropdown-item">Северини</option>
+                <option value="Прателла" class="dropdown-item">Прателла</option>
+                <option value="Карра" class="dropdown-item">Карра</option>
                 <option value="Балла" class="dropdown-item">Балла</option>
                 <option value="Северини" class="dropdown-item">Северини</option>
                 <option value="Прателла" class="dropdown-item">Прателла</option>
@@ -215,15 +245,14 @@
         <div class="galery-wrapper">
           <div class="galery-filters">
             <div class="gallery-filter">
-              <!-- <a href="#" class="gallery-author gallery-filter_item">Автор </a>
-              <a href="#" class="gallery-dir gallery-filter_item">Направление</a>
-              <a href="#" class="gallery-tech gallery-filter_item">Техника </a> -->
               <select class="galery-select">
-                <option value="Автор" class="galery-option" selected>
-                  Автор
+                <option value="Живопись" class="galery-option" selected>
+                  Живопись
                 </option>
-                <option value="" class="galery-option">Направление</option>
-                <option value="" class="galery-option">Техника</option>
+                <option value="Рисунок" class="galery-option">Рисунок</option>
+                <option value="Скульптура" class="galery-option">
+                  Скульптура
+                </option>
               </select>
             </div>
             <p class="gallery-descr bottom">
@@ -245,98 +274,62 @@
                 <div class="galery-hover">
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
-                <img
-                  src="img/classic1.png"
-                  alt=""
-                  class="galleryImg galleryImg1"
-                />
+                <img src="img/art1.png" alt="" class="galleryImg galleryImg1" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art2.png" alt="" class="galleryImg galleryImg2" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art3.png" alt="" class="galleryImg galleryImg3" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art4.png" alt="" class="galleryImg galleryImg4" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art5.png" alt="" class="galleryImg galleryImg5" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art6.png" alt="" class="galleryImg galleryImg6" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art7.png" alt="" class="galleryImg galleryImg7" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art8.png" alt="" class="galleryImg galleryImg8" />
+              </a>
+              <a href="" class="gallery-slide">
+                <div class="galery-hover">
+                  <img src="img/galery-hover.png" alt="" class="hover-img" />
+                </div>
+                <img src="img/art9.png" alt="" class="galleryImg galleryImg9" />
               </a>
               <a href="" class="gallery-slide">
                 <div class="galery-hover">
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/classic2.png"
-                  alt=""
-                  class="galleryImg galleryImg2"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic3.png"
-                  alt=""
-                  class="galleryImg galleryImg3"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic4.png"
-                  alt=""
-                  class="galleryImg galleryImg4"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic5.png"
-                  alt=""
-                  class="galleryImg galleryImg5"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic6.png"
-                  alt=""
-                  class="galleryImg galleryImg6"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic7.png"
-                  alt=""
-                  class="galleryImg galleryImg7"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic8.png"
-                  alt=""
-                  class="galleryImg galleryImg8"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic9.png"
-                  alt=""
-                  class="galleryImg galleryImg9"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/classic10.png"
+                  src="img/art10.png"
                   alt=""
                   class="galleryImg galleryImg10"
                 />
@@ -346,7 +339,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/classic11.png"
+                  src="img/art11.png"
                   alt=""
                   class="galleryImg galleryImg11"
                 />
@@ -356,7 +349,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/classic12.png"
+                  src="img/art12.png"
                   alt=""
                   class="galleryImg galleryImg12"
                 />
@@ -366,7 +359,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art1.png"
+                  src="img/art13.png"
                   alt=""
                   class="galleryImg galleryImg13"
                 />
@@ -376,7 +369,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art2.png"
+                  src="img/art14.png"
                   alt=""
                   class="galleryImg galleryImg14"
                 />
@@ -386,7 +379,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art3.png"
+                  src="img/art15.png"
                   alt=""
                   class="galleryImg galleryImg15"
                 />
@@ -396,7 +389,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art4.png"
+                  src="img/art16.png"
                   alt=""
                   class="galleryImg galleryImg16"
                 />
@@ -406,7 +399,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art5.png"
+                  src="img/art17.png"
                   alt=""
                   class="galleryImg galleryImg17"
                 />
@@ -416,7 +409,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art6.png"
+                  src="img/art18.png"
                   alt=""
                   class="galleryImg galleryImg18"
                 />
@@ -426,7 +419,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art7.png"
+                  src="img/art19.png"
                   alt=""
                   class="galleryImg galleryImg19"
                 />
@@ -436,7 +429,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art8.png"
+                  src="img/art20.png"
                   alt=""
                   class="galleryImg galleryImg20"
                 />
@@ -446,7 +439,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art9.png"
+                  src="img/art21.png"
                   alt=""
                   class="galleryImg galleryImg21"
                 />
@@ -456,7 +449,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art10.png"
+                  src="img/art22.png"
                   alt=""
                   class="galleryImg galleryImg22"
                 />
@@ -466,7 +459,7 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art11.png"
+                  src="img/art23.png"
                   alt=""
                   class="galleryImg galleryImg23"
                 />
@@ -476,69 +469,9 @@
                   <img src="img/galery-hover.png" alt="" class="hover-img" />
                 </div>
                 <img
-                  src="img/art12.png"
+                  src="img/art24.png"
                   alt=""
                   class="galleryImg galleryImg24"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art13.png"
-                  alt=""
-                  class="galleryImg galleryImg25"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art14.png"
-                  alt=""
-                  class="galleryImg galleryImg26"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art15.png"
-                  alt=""
-                  class="galleryImg galleryImg27"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art16.png"
-                  alt=""
-                  class="galleryImg galleryImg28"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art17.png"
-                  alt=""
-                  class="galleryImg galleryImg29"
-                />
-              </a>
-              <a href="" class="gallery-slide">
-                <div class="galery-hover">
-                  <img src="img/galery-hover.png" alt="" class="hover-img" />
-                </div>
-                <img
-                  src="img/art18.png"
-                  alt=""
-                  class="galleryImg galleryImg30"
                 />
               </a>
             </div>
@@ -1532,6 +1465,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/slick.js"></script>
