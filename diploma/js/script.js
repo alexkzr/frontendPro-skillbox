@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     headerList.appendChild(headerLogin);
     headerLogin.classList.toggle("headerLog-active");
   });
-
+  let pageGall = document.querySelector(".pagination-gallery");
   $(".slider-gallery").slick({
     infinite: false,
     slidesPerRow: 3,
@@ -78,9 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
       '<button type="button" class="gallery-slick-prev"><span class="arrow-left"></span></button>',
     nextArrow:
       '<button type="button" class="gallery-slick-next"><span class="arrow-right"></span></button>',
+    appendArrows: pageGall,
     responsive: [
       {
         breakpoint: 1200,
+        settings: {
+          slidesPerRow: 2,
+          rows: 2,
+        },
+      },
+      {
+        breakpoint: 1024,
         settings: {
           slidesPerRow: 2,
           rows: 2,
@@ -182,6 +190,10 @@ document.addEventListener("DOMContentLoaded", () => {
     active: 0,
     collapsible: true,
   });
+  $("#accordion-mobile").accordion({
+    active: 0,
+    collapsible: true,
+  });
 
   //script to show more events on button click
   const eventsCards = document.querySelectorAll(".events-switch");
@@ -199,6 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //books slider
+  const paginBooks = document.querySelector(".books-pagination");
+
   $(".books-slides").slick({
     infinite: false,
     slidesToShow: 3,
@@ -206,9 +220,16 @@ document.addEventListener("DOMContentLoaded", () => {
       '<button type="button" class="books-slick-prev"><span class="arrow-left"></span></button>',
     nextArrow:
       '<button type="button" class="books-slick-next"><span class="arrow-right"></span></button>',
+    appendArrows: paginBooks,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1025,
         settings: {
           slidesToShow: 2,
         },
@@ -344,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
         },
@@ -491,4 +512,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   });
+
+  //1024 tweaks
+  const changeimgSrc = (brk, src, elem) => {
+    let width = window.innerWidth;
+    if (width <= brk) {
+      document.querySelector(elem).src = src;
+    }
+  };
+  changeimgSrc(1024, "img/logo1024.png", ".logo img");
 });
