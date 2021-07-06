@@ -639,7 +639,7 @@
   }
   /*projects*/
   .projects {
-    padding: 80px 0 60px;
+    padding: 80px 0 70px;
   }
   .projects .general-title {
     margin-bottom: 17px;
@@ -652,6 +652,44 @@
   }
   .projects-img {
     min-width: 384px;
+  }
+  .projects-slider .slick-slide {
+    margin-right: 37px;
+  }
+  /*Contacts*/
+  .contacts .general-title {
+    margin-bottom: 19px;
+  }
+  .contacts-info .container {
+    padding-left: 0;
+    display: block;
+    padding-top: 123px;
+  }
+  .contacts-descr {
+    margin-bottom: 35px;
+  }
+  .contacts-call {
+    margin-bottom: 15px;
+  }
+  .contacts-input {
+    margin-bottom: 22px;
+  }
+  .contacts-messengers a img {
+    height: 60px;
+    width: 60px;
+  }
+  .whatsapp {
+    margin-right: 25px;
+  }
+  .footer-media svg {
+    width: 60px;
+    height: 60px;
+  }
+  .footer .container {
+    padding: 0 45px 0 50px;
+  }
+  .media-item:not(:last-child) {
+    margin-right: 17px;
   }
 }
 @media (max-width: 768px) {

@@ -1282,13 +1282,31 @@ a.events-link {
   justify-content: space-between;
   align-items: center;
 }
+.projects-slick-prev .arrow-left {
+  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
 .projects-slick-prev {
   margin-right: 40px;
   padding: 15px;
+  background-color: #ececec;
+  color: #000;
+}
+.projects-slick-next .arrow-right {
+  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
 }
 .projects-slick-next {
   margin-left: 40px;
   padding: 15px;
+  background-color: #ececec;
+  color: #000;
 }
 
 .projects-slider > .slick-list > .slick-track > .slick-slide:hover img {

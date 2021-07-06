@@ -223,12 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
     appendArrows: paginBooks,
     responsive: [
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
         breakpoint: 1025,
         settings: {
           slidesToShow: 2,
@@ -261,11 +255,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let slides2 = document.querySelectorAll(".books-slide");
   let width = window.innerWidth;
 
-  if (width >= 480) {
-    paginationBooks.appendChild(booksPrev);
-    paginationBooks.appendChild(booksNext);
-    paginationBooks.insertBefore(bookNumber, booksNext);
-  }
+  // if (width >= 480) {
+  //   paginationBooks.appendChild(booksPrev);
+  //   paginationBooks.appendChild(booksNext);
+  //   paginationBooks.insertBefore(bookNumber, booksNext);
+  // }
   var numberFunction = function () {
     var numbers = Array.from(
       document.getElementsByClassName("books-slide")
@@ -359,7 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
       '<button type="button" class="projects-slick-next"><span class="arrow-right"></span></button>',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
         },
