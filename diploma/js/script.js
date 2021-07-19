@@ -12,23 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let anchorLinks = document.querySelectorAll("a");
   let dropdownLinks = document.querySelectorAll(".choices__item");
 
-  Array.prototype.forEach.call(
-    document.querySelectorAll(".choices__item"),
-    (el) => new SimpleBar()
-  );
   dropdownLinks.forEach((elem) => {
     elem.addEventListener("click", (e) => {
       e.preventDefault();
       elem.classList.toggle("link-visited");
     });
   });
+
   anchorLinks.forEach((elem) => {
     elem.addEventListener("click", (e) => {
       e.preventDefault();
       elem.classList.toggle("link-visited");
     });
   });
-
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".choices__item"),
+    (el) => new SimpleBar()
+  );
   listItem.classList.add("header_listitem");
 
   const element = document
@@ -515,4 +515,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   changeimgSrc(1024, "img/logo1024.png", ".logo img");
+  let dropdownMenu = document.querySelectorAll(
+    ".dropdown-list .choices__list--single .choices__item"
+  );
+
+  dropdownMenu.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      elem.classList.toggle("link-visited");
+    });
+  });
 });
