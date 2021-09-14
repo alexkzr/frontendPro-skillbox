@@ -525,4 +525,20 @@ document.addEventListener("DOMContentLoaded", () => {
       elem.classList.toggle("link-visited");
     });
   });
+  let slideAnchors = document.querySelectorAll(".gallery-slide");
+  slideAnchors.forEach((elem) => {
+    elem.addEventListener("mousedown", (e) => {
+      if (e.target.classList.contains("galery-hover")) {
+        console.log("mousedown");
+        elem.classList.toggle("anchor-click");
+      }
+    });
+
+    elem.addEventListener("mouseup", (e) => {
+      if (e.target.classList.contains("galery-hover")) {
+        console.log("mouseup");
+        elem.classList.toggle("anchor-click");
+      }
+    });
+  });
 });
