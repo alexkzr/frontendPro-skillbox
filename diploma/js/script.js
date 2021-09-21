@@ -428,8 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
     myMap.geoObjects.add(myPlacemark1);
   }
   //galery modal script
-  let galeryModals = document.querySelectorAll(".galery-modal");
-  let galeryImg = document.querySelectorAll(".hover-img");
+  const modalCLose = document.querySelector(".modal-close");
   const sliderGalery = document.querySelector(".slider-gallery");
   let modalWrapper = document.querySelector(".modal-wrapper");
   let modalImg = document.querySelector(".modalImg");
@@ -441,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modalImg.src = galSrc;
     }
   });
-  modalWrapper.addEventListener("click", (e) => {
+  modalCLose.addEventListener("click", (e) => {
     e.preventDefault();
     modalWrapper.classList.remove("modal-active");
   });
